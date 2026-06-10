@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper,oneside,bibliography=totoc]{scrbook}
+\input{packages.tex}
+\input{commands.tex}
+
+\begin{document}
+
+\pagestyle{empty}% Ohne den Nummerierungsstil zu ändern, Seitenzahlen und Kolumnentitel aus.
+
+
+\title{Thesis Title}
+\author{{\LARGE David Arps}}  
+
+\begin{center}\Large 
+    %Bachelor Thesis in the Bachelor of Arts programme Computerlinguistik at Heinrich-Heine-Universität Düsseldorf
+    
+    {Masterarbeit im Studiengang Linguistik Master of Arts an der Heinrich-Heine-Universität Düsseldorf}
+    
+    \vspace{1.5cm}
+
+    \includegraphics[width=.35\textwidth]{img/logo-hhu.png}
+
+    \vspace{1.5cm}
+    \textbf{\Huge Title goes here}
+    
+    \vspace{1.5cm}
+    vorgelegt von:\\
+    Name\\
+    Straße 66\\
+    PLZ Ort\\
+    \url{deinemail@hhu.de}\\
+    Matrikelnummer: 6665508\\
+    
+    \vspace{1cm}
+    Abgabedatum: 33. März 2525\\
+    Erstgutachter: Title First Advisor\\
+    Zweitgutachterin: Title Second Advisor
+    
+\end{center}
+
+\newpage
+
+% set page number to 1
+\setcounter{page}{1}
+% Hier römisch zählen, unten ab 1
+\pagenumbering{roman}
+\pagestyle{plain}
+\tableofcontents
+\listoffigures
+
+\listoftables
+
+\listoftodos
+
+\newpage
+% Document level todos
+%\todo[inline]{Make text markup consistent}
+
+\newpage
+\input{text/acknowledgements.tex}
+
+\newpage
+\pagenumbering{arabic}
+\pagestyle{headings}
+
+\input{text/abstract}
+
+\chapter{Introduction}
+\input{text/intro}
+
+\chapter{Todo lists}\label{ch:lm-transformers}
+\input{text/todolists}
+
+\chapter{Example tex Code}\label{ch:lit-review}
+\input{text/examples}
+
+\chapter{Bibliography}
+\input{text/bibliography}
+
+\bibliographystyle{packages/acl-natbib.bst}
+\bibliography{biblio} %Dateiname der Bibliographiedatei mit Extension .bib  
+% anthology-1,anthology-2
+
+% Appendix
+%\chapter*{Appendix}
+\appendix
+\input{text/appendix}
+
+\end{document}
+
+
