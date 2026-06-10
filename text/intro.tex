@@ -1,0 +1,24 @@
+
+
+% Relevance
+\paragraph{Motivation} 
+This template was created to make sure that students can focus on the interesting stuff (writing an interesting thesis), rather than having to set up a latex template. 
+The template is built from my own Master thesis, which I can make available upon request. Other master theses are available via the Institute of Linguistics (\url{https://www.ling.hhu.de/})
+
+
+
+\paragraph{Structure of this template} 
+The introduction contains some notes about the template, and below that you will see some examples of how to add Tables, Figures, examples, etc.
+I chose to write the text in different tex files, because it makes the main file more readable. As a clear advantage, this accelerates writing a single chapter. E.g. the main file has blocks such as this:  
+
+\begin{verbatim}
+\chapter{Linguistic Background}\label{ch:linguistic-background}
+\input{text/linguistic-background}
+\end{verbatim}
+
+You can just comment out such a block in order to not compile this chapter. 
+
+\paragraph{Workflow}
+The described techniques work well when writing locally, using VSCode and the Latex Workshop plugin as an IDE. 
+This setup allows to version your thesis using git, e.g. with a private github repository. Overleaf projects can also be synced with git, so a hybrid local/overleaf setup is also possible. 
+

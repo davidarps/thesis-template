@@ -1,0 +1,53 @@
+\section{Linguistic examples}
+
+Linguistic Examples:
+
+The first sentence is taken from a review and part of the treebank released by \cite{silveira-etal-2014-gold}. 
+The second sentence is made-up. 
+
+\begin{exe}
+    \ex \label{ex:intro} \begin{xlist} 
+        \ex \label{ex:intro-orig} The service was friendly and fast, but this just doesn't make up for the lackluster product.
+        \ex \label{ex:intro-madeup} The popcorn was fresh and salty, but this just doesn't make up for the bad movie.
+        \ex \label{ex:intro-nonce} The interior was outdated and fresh, but this rather doesn't make up for the newborn period.
+    \end{xlist}
+\end{exe}
+
+Glossing is also possible and should follow the Leipzig Glossing rules as closely as possible.
+
+\begin{itemize}
+    \item \url{https://www.eva.mpg.de/lingua/pdf/Glossing-Rules.pdf}
+    \item \url{https://ctan.org/pkg/gb4e}
+\end{itemize}
+
+An example with some light glossing: 
+
+\begin{exe}
+    \ex \label{ex:man-sees-actress} \begin{xlist}
+        \ex \label{ex:man-see-actress-a} \gll Der Mann sieht die Schauspielerin im Fernsehen.\\
+        DEF.NOM.SG man see.PRES.3SG DEF actress in TV\\
+        `The man sees the actress on TV.'
+        \ex \label{ex:man-see-actress-b} \gll Die Schauspielerin sieht der Mann im Fernsehen.\\
+        DEF actress see.PRES.3SG DEF.NOM.SG man in TV\\
+        `The man sees \textit{the actress} on TV.'
+        \ex \label{ex:man-see-actress-c} Die Schauspielerin sieht den Mann im Fernsehen.\\
+        `The actress sees the man on TV.'
+    \end{xlist}
+\end{exe}
+
+
+\section{Dependency trees}
+
+Using \texttt{tikz-dependency}, example in Figure~\ref{fig:nonce-data-general-algo}. Code for bigger figures and tables should be put in separate files. 
+
+\input{fig/nonce-data-general-algo.tex}
+
+\section{Tables}
+
+Example table is displayed in Table~\ref{tab:exp1-data}. 
+For complex tables, multicolumn and multirow are your friends!
+
+\input{tables/exp1-data.tex}
+
+
+

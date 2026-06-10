@@ -1,0 +1,77 @@
+
+\usepackage{scrhack} % to avoid some error messages during compilation of scrbook class
+
+%%%%%%%%%%% fonts and symbols
+\usepackage[scaled]{helvet}
+\usepackage{mathpazo}
+\usepackage{avant}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{amsmath,amssymb} % https://texwelt.de/fragen/12196/was-machen-die-pakete-amsmath-amsfonts-und-amssymb
+
+% Chinese
+\usepackage{fontspec}
+\usepackage[slantfont, boldfont]{xeCJK}
+
+
+%%%%%%%%%%% page layout
+\usepackage[left=35mm,right=35mm]{geometry}
+
+\usepackage{enumitem}
+\setlist{noitemsep} % use "nosep" instead to have no separation between (a) items and (b) the list and surrounding text
+
+\usepackage{blindtext}
+
+
+\setlength{\marginparwidth}{2cm} % required for todonotes
+\usepackage[textwidth=30mm]{todonotes}
+
+
+
+
+%%%%%%%%%%% Biblio stuff
+\usepackage{natbib} % Kilu uses authoryear2 für schönere Quellenangaben, inklusive der Befehle \citet{}, \citep[z.\,B][SEITEN]{QUELLE}
+%\setcitestyle{notesep=:\,} % zum Setzen von Seitenangaben
+
+
+
+%%%%%%%%%%% Figures, pics etc. 
+
+\usepackage{graphicx}
+
+% Really good fig placement text: https://tex.stackexchange.com/questions/39017/how-to-influence-the-position-of-float-environments-like-figure-and-table-in-lat
+\usepackage{float} % Force figures to appear in paragraph by [H]
+\usepackage{caption} 
+\usepackage{subcaption}
+\usepackage{rotating} % for rotating figures
+
+% How much text must be on a page and how big have floats to be to appear lonely on a page?
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.8}
+
+\usepackage{tikz, tikz-qtree}
+\usepackage{tikz-dependency}
+%tikz-uml
+\usepackage{multirow}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{array}
+
+%%%%%%%%%%% Links to websites and crossref. inside document
+
+\usepackage{url} % print urls by \url{URL}
+%\let\theHsubfigure\relax % there was a claim that this is necessary because subcaption redefines the theHsubfigure command. Seems to work without though
+\usepackage{hyperref} 
+
+
+%%%%%%%%%%% Linguistic examples
+\usepackage{gb4e} %glossing, load last because it might otherwise create capacity crashes. Note to future self: gb4e redefines the underscore, never use it in document
+
+
+
+ 
+
+
+

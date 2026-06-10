@@ -1,0 +1,43 @@
+\paragraph{Motivation}
+One of the most difficult parts of longer-running projects, such as a thesis, is keeping track of what you have to do. 
+As a rule, find a system that is simple, and that allows you to keep momentum in your most important goal, namely writing. 
+Here is what worked for me. 
+
+\paragraph{TODO notes}
+The \texttt{todonotes} latex package allows to add todos in the pdf document. This means you have the todo elements directly in your tex code, rather than overleaf commments, a third-party software, handwritten notes, etc. 
+In the beginning of this document, there appears a Todo List which you can use as a starting point if you do not know what to do next. 
+
+
+
+\paragraph{Types of TODOs}
+
+The most basic ones are small TODO notes on the side\todo{make sure this formula works}. 
+For longer TODO notes, such as thoughts on how to structure a section, you can use inline todos with \texttt{\textbackslash todo[inline]{bla}}: 
+
+\todo[inline]{
+    More detailed instructions and notes. Possibly spanning multiple lines, so you can ölkjknu kducbejn 
+}
+
+If you have to draw a figure, table, etc., you can use missingfigure. 
+
+\begin{figure}
+    \missingfigure{Draw a nice syntax tree.}
+    \caption{Syntax tree}
+    \label{fig:syntaxtree}
+\end{figure}
+
+By the way, a great way to sketch figures is quickly drawing them on paper, and then putting a picture of that drawing in your draft with \texttt{\textbackslash includegraphics}. This way you defer the time-consuming digital drawing to a point in time when you know that the figure will definitely stay.  
+
+
+It is also possible to define custom todo commands. 
+For example, you might write in your discussion a sentence such as this: 
+
+Related work has shown that trees mostly grow downwards in Linguistics (Section~\findref{refer to related work section}), and upwards in nature. 
+
+In the preamble (in \texttt{commands.tex}), the command \texttt{\textbackslash findref} is defined to make a todo note in a particular color, and add the \texttt{findref} prefix so that you know you have to find a tex reference label. 
+
+Similarly, the \texttt{\textbackslash findbib} command makes a todo note for searching for a literature reference, or a bibtex entry. For example like this \findbib{bibtex entry for some related work} 
+This allows you to stay in the flow of writing, instead of interrupting this flow to look for the bibtex entry. Later, you can resolve all of these Todo items in one go. 
+
+Of course, you can define more specific todo commands if you have the need. 
+

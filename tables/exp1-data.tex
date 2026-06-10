@@ -1,0 +1,18 @@
+\begin{table}\centering\scalebox{.8}{
+\begin{tabular}{l|rrrrrrrrrrrrr}
+    \toprule
+    {} & train & test & \multicolumn{2}{c}{\texttt{NOUN}} &  \multicolumn{2}{c}{\texttt{PROPN}} & \multicolumn{2}{c}{\texttt{ADJ}} &  \multicolumn{2}{c}{\texttt{ADV}} &  \multicolumn{2}{c}{\texttt{VERB}} & total \\
+    & tokens & tokens & freq. & repl. & freq. & repl. & freq. & repl. & freq. & repl. & freq. & repl. & repl. \\
+    \midrule
+    ar &        224K &        28K &            0.34 &           0.93 &             0.01 &            0.77 &           0.10 &          0.93 &           0.01 &          0.74 &            0.08 &           0.66 &              0.47 \\
+    de &       2754K &       326K &            0.21 &           0.96 &             0.06 &            0.93 &           0.08 &          0.68 &           0.06 &          0.92 &            0.08 &           0.61 &              0.41 \\
+    en &        204K &        25K &            0.16 &           0.85 &             0.08 &            0.84 &           0.07 &          0.86 &           0.04 &          0.83 &            0.11 &           0.59 &              0.38 \\
+    fr &        355K &        10K &            0.19 &           0.83 &             0.05 &            0.69 &           0.06 &          0.88 &           0.05 &          0.92 &            0.08 &           0.50 &              0.36 \\
+    ru &       1206K &       158K &            0.23 &           0.84 &             0.04 &            0.70 &           0.09 &          0.80 &           0.05 &          0.89 &            0.11 &           0.46 &              0.39 \\
+    zh &         99K &        12K &            0.28 &           0.88 &             0.08 &            0.92 &           0.02 &          0.80 &           0.05 &          0.94 &            0.15 &           0.65 &              0.48 \\
+    \bottomrule
+\end{tabular}
+}
+\caption[Data statistics for Experiment 1]{Data statistics for Experiment 1. For each UPOS tag that is affected by the replacement, freq. denotes the relative frequency of the tag in the testing data, and repl. denotes the relative frequency of forms with that tag that are replaced with other forms. The total column shows the relative frequency of forms that are replaced across all tags. zh = Chinese.}
+\label{tab:exp1-data}
+\end{table}

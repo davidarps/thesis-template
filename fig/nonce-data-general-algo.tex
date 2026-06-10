@@ -1,0 +1,74 @@
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[]{\textwidth}
+        \begin{enumerate}
+            \item Define the set of UPOS tags that are considered content words. 
+            \item For each content word token $t$ in the input treebank, collect the syntactic context $s(t)$. Fill the map $\mathcal{C}$ that maps syntactic contexts to the set of word forms that appear in that context.
+            \item Create the output treebank. Replace each content word token $t$ in the input treebank with a random token from the set $\mathcal{C}(s(t))$.
+        \end{enumerate}
+        \caption{The algorithm}
+    \end{subfigure}
+    \begin{subfigure}[]{\textwidth}\centering\scalebox{.85}{
+        %\includegraphics[width=\textwidth]{img/ptb-noncegeneration-example.png}
+        % The service was friendly and fast. 
+        % The interior was outdated and fresh
+        \begin{tikzpicture}
+        \node at (0cm, 0cm) {
+        \begin{dependency}
+        \begin{deptext}
+            \texttt{DET} \& \texttt{NOUN} \& \texttt{AUX} \& \texttt{ADJ} \& \texttt{CCONJ} \& \texttt{ADJ} \& \texttt{PUNCT} \\
+            The \& service \& was \& friendly \& and \& fast \& . \\
+            The \& \tbf{interior} \& was \& \tbf{outdated} \& and \& \tbf{fresh} \& . \\
+        \end{deptext}
+        \depedge{2}{1}{det}
+        \deproot{4}{root}
+        \depedge{4}{2}{nsubj}
+        \depedge{4}{3}{cop}
+        \depedge{4}{6}{cconj}
+        \depedge{4}{7}{punct}
+        \depedge{6}{5}{cc}
+    \end{dependency}};
+
+    \node at (-40mm, 40mm) {
+        \begin{dependency}
+            \begin{deptext}
+                \& NOUN \\
+                \& interior \\
+            \end{deptext}
+            \deproot{2}{nsubj}
+            \depedge{2}{1}{det}
+        \end{dependency}};
+    
+    \node at (-8mm, 40mm) {
+        \begin{dependency}
+            \begin{deptext}
+                \& \& ADJ \& \& \\
+                \& \& outdated \& \& \\
+            \end{deptext}
+            \deproot{3}{root}
+            \depedge{3}{1}{nsubj}
+            \depedge{3}{2}{cop}
+            \depedge{3}{4}{cconcj}
+            \depedge{3}{5}{punct}
+        \end{dependency}};
+    \node at (50mm, 40mm) {
+        \begin{dependency}
+            \begin{deptext}
+                \& ADJ \\
+                \& fresh \\
+            \end{deptext}
+            \deproot{2}{cconj}
+            \depedge{2}{1}{cc}
+        \end{dependency}};
+
+    \draw[->, dashed] (-38mm, 25mm) -- (-29mm, 0mm);
+    \draw[->, dashed] (-10mm, 25mm) -- (-3mm, 9mm);
+    \draw[->, dashed] (48mm, 25mm) -- (30mm, 0mm);
+\end{tikzpicture}
+    }
+        \caption{A graphical example}\label{fig:nonce-data-general-algo-example}
+    \end{subfigure}
+    \caption[Language-independent nonce data generation]{\label{fig:nonce-data-general-algo}Language-independent nonce data generation algorithm. 
+    The syntactic context $s(t)$ of the replacements is illustrated by the tree fragments. Furthermore, $\mathcal{C}$ contains the information that $s(service)=s(interior), s(friendly)=s(outdated), s(fast)=s(fresh)$.}
+\end{figure}
+
